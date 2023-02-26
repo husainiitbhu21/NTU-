@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/bla.css">
+    <title>Simplify Articles</title>
+  </head>
+  <body>
+    {% for alpha in list.keys() %}
+      {% if list[alpha].strip()|length != 0 %}
+        <h2>{{alpha.capitalize()}}</h2>
+        <p>{{list[alpha].capitalize()}}</p>
+        <hr>
+      {% endif %}
+    {% endfor %}
+  </body>
+</html>
